@@ -1,0 +1,5 @@
+@mixin fontSize($sizeValue) {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    color: $primary;
+    letter-spacing: 0.1rem;
+}

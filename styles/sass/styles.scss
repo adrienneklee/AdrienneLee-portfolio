@@ -1,0 +1,64 @@
+@import "setup";
+@import "colorPalette";
+@import "fonts";
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+html {
+    font-size: 125%;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 16px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    color: $primary;
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    max-width: 700px;
+    padding: 50px;
+    border: 3px solid $tertiary;
+    text-align: center;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $primary;
+}
+
+.iconContainer {
+    margin-top: 20px;
+}
+
+i {
+    font-size: 20px;
+    padding: 10px;
+}
+
+h1 {
+    @include fontSize(2rem);
+    line-height: 2.2rem;
+
+}
+
+h2 {
+    @include fontSize(1.6rem);
+    line-height: 1.8rem;
+}
+
