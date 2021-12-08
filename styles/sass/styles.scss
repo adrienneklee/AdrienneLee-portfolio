@@ -1,64 +1,181 @@
 @import "setup";
-@import "colorPalette";
 @import "fonts";
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    max-width: 100%;
+@import "colorPalette";
+
+// Header //
+header {
+    height: 100vh;
 }
 
-html {
-    font-size: 125%;
+nav {
+    justify-content: space-between;
+    padding: 20px 0;
+    ul {
+        width: 50%;
+        justify-content: flex-end;
+        li {
+            margin-left: 50px;
+        }
+    }
 }
 
-body {
-    min-height: 100vh;
-    font-size: 16px;
-    font-family: 'Zen Kaku Gothic New', sans-serif;
-    color: $primary;
-    background-color: $background;
-    display: flex;
-    flex-direction: column;
+.title-container {
+    height: 80vh;
+    align-items: center;
+    h1 span {
+        text-transform: uppercase;
+    }
+}
+
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px $secondary,
+                0 0 10px $secondary,
+                0 0 20px $secondary,
+                0 0 40px $secondary,
+                0 0 80px $secondary,
+                0 0 100px $secondary,
+                0 0 120px $secondary;
+    animation: blink 3s infinite linear alternate;
+}
+
+@keyframes blink {
+    60%, 70%, 79% {
+        opacity: 1;
+    }
+
+    65%, 67%, 76%, 78% {
+        opacity: 0.2;
+    }
+
+    66%, 69%, 77% {
+        opacity: 0.8;;
+    }
+}
+
+// About Me //
+.img-container {
+    width: 35%;
+    img {
+        border-radius: 10px;
+    }
+}
+
+.text-container {
+    width: calc(65% - 50px);
+    margin-left: 50px;
+    p {
+        margin-bottom: 20px;
+    }
+    h3 {
+        margin-right: 30px;
+        font-weight: 700;
+    }
+}
+
+.whisper {
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+// Project Section
+.projects {
+    margin: 100px 0;
+    background-color: $primary;
+    color: $background;
+    padding-bottom: 50px;
+    h2 {
+        color: $background;
+        text-align: left;
+        padding-top: 50px;
+    }
+}
+
+.project-container {
     justify-content: center;
     align-items: center;
+    margin-bottom: 75px;
 }
 
-main {
-    max-width: 700px;
-    padding: 50px;
-    border: 3px solid $tertiary;
+.project-img-cont {
+    width: calc(50% - 25px);
+    margin-right: 25px;
+}
+
+li .icon {
+    color: black;
+}
+
+.project-description, .project-description-special {
+    width: calc(50% - 25px);
+    margin-left: 25px;
+    justify-content: center;
+    h3, li, a {
+        color: black;
+    }
+}
+
+
+.project-description-special {
+    width: calc(50% - 25px);
+    margin-right: 25px;
+}
+
+.project-description h3, .project-description p,
+.project-description-special h3, .project-description-special p {
+    margin-bottom: 10px;
+}
+
+.project-description ul, .project-description-special ul {
+    margin-bottom: 10px;
+}
+
+.project-img-cont-special {
+    width: calc(50% - 25px);
+    margin-left: 25px;
+}
+
+.project-btn {
+    border: 1px solid $secondary;
     text-align: center;
+    width: 150px;
+    padding: 5px;
+    margin: 10px;
+}
+// Contact + Footer
+.contact {
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    h2, p {
+        margin-bottom: 25px;
+    }
+    img {
+        width: 250px;
+        border-radius: 50%;
+        margin: 20px 0;
+    }
+    ul {
+        padding: 10px 0;
+        // border: 1px solid red;
+    }
 }
 
-ul, li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.btn-email {
+    border: 3px solid $secondary;
+    width: 250px;
+    padding: 5px;
+    margin: 10px auto;
+    p {
+        margin: 0;
+    }
 }
 
-a {
-    text-decoration: none;
-    color: $primary;
+footer {
+    text-align: center;
+    p {
+        font-size: 1.4rem;
+        margin: 10px 0;
+    }
 }
-
-.iconContainer {
-    margin-top: 20px;
-}
-
-i {
-    font-size: 20px;
-    padding: 10px;
-}
-
-h1 {
-    @include fontSize(2rem);
-    line-height: 2.2rem;
-
-}
-
-h2 {
-    @include fontSize(1.6rem);
-    line-height: 1.8rem;
-}
-

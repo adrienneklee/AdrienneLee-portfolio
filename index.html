@@ -4,24 +4,178 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adrienne's Portfolio</title>
+    <title>Adrienne Lee's Portfolio</title>
+
+    <!-- Link to Font Awesome -->
     <script src="https://kit.fontawesome.com/d52e43a2f0.js" crossorigin="anonymous"></script>
+
+    <!-- Link to Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&family=Work+Sans:wght@400;600;700&display=swap"
         rel="stylesheet">
+    
+    <!-- Link to AOS Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Link to Style Sheet -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <a href="#about" class="skip-link">Skip to main content.</a>
+    <!-- Start of Header Section -->
+    <header>
+        <div class="wrapper">
+            <nav class="flex">
+                <div><p>Logo</p></div>
+                <ul class="flex">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <section class="title-container flex-column">
+                <h1 class="title">Adrienne Lee</h1>
+                <h2>Front End Developer</h2>
+            </section>
+
+        </div> <!-- Wrapper Closing Div -->
+    </header> 
+    <!-- End of Header Section -->
+
+    <!-- Start of Main Section -->
     <main>
-        <h1>Adrienne Lee</h1>
-        <h2>front-end developer</h2>
-        <div class="iconContainer">
-            <a href="mailto: adrienneklee@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/adrienneklee/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/adrienneklee"><i class="fab fa-github-square"></i></a>
-            <a href="https://twitter.com/AdrienneKLee"><i class="fab fa-twitter-square"></i></a>
+        <div class="wrapper">
+            <h2>About Me</h2>
+            <section id="about" class="flex">
+                <div class="img-container">
+                    <img src="./assets/AdrienneLeeBabyDev.png" alt="Adrienne as a child wearing swim goggles.">
+                    <p class="whisper">Been wearing my blue light glasses since 1988.</p>
+                </div>
+
+                <section class="text-container">
+                    <p><span class="italic">Oh, hello!</span> 
+                    <br>
+                    I’m Adrienne, a Front End Developer based out of Hamilton, Ontario with a background in sustainability and non-profit management.  I love being able to bridge creativity and tech to build dynamic and meaningful web applications.</p>
+                    
+                    <p>My passion for technology is bolstered by previous experience in corporate social responsibility and sustainability. I believe that tech can and should be transformative and accessible for all users, and has the ability to have a profound impact on people’s lives.</p>
+                    
+                    <p>When I’m not coding you can find me hiking with my dog McGuffin, debating on the best movies of the 90s, or eating anything and everything with a pair of chopsticks.</p>
+                    
+                    <p>Check out my tech stack and if you think I would be a fit for you team - let’s make something meaningful!</p>
+
+                    <section class="flex">
+                        <h3>Skills</h3>
+                        <ul class="flex">
+                            <li><i class="fab fa-react" aria-hidden="true"></i></li>
+                            <li><i class="fab fa-html5" aria-hidden="true"></i></li>
+                            <li><i class="fab fa-css3-alt" aria-hidden="true"></i></li>
+                            <li><i class="fab fa-sass" aria-hidden="true"></i></li>
+                            <li><i class="fab fa-js-square" aria-hidden="true"></i></li>
+                            <li><img class="icon" src="./assets/jquery.svg" alt="icon image for jquery" aria-hidden="true"></li>
+                            <li><i class="fab fa-git-square" aria-hidden="true"></i></li>
+                            <li><i class="fab fa-github-square" aria-hidden="true"></i></li>
+                            <li><img class="icon" src="./assets/firebase.svg" alt="icon image for firebase" aria-hidden="true"></li>
+                        </ul>
+                    </section>
+                </section>
+            </section>
         </div>
+
+        <section id="projects" class="projects">
+            <div class="wrapper">
+                <h2>Projects</h2>
+
+                <section class="project-container flex" data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in">
+                    <div class="project-img-cont">
+                        <img src="./assets/GuessWhoGhibli.png" alt="Guess Who Ghibli App">
+                    </div>
+                    <div class="project-description flex-column">
+                        <h3>Guess Who Ghibli</h3>
+                        <p>An application built with Javascript inspired by the '80s board game <span class="italic">Guess Who?</span>. Users are prompted to guess randomly generated characters from the Studio Ghibli API. Made in collaboration with friend <a href="https://brentoncodes.com/">Brenton Pedler.</a></p>
+                        <ul class="flex">
+                            <li><i class="fab fa-html5" aria-hidden="true"></i></li>
+                            <li><i class="fab fa-sass" aria-hidden="true"></i></li>
+                            <li><i class="fab fa-js-square" aria-hidden="true"></i></li>
+                        </ul>
+                        <ul class="flex">
+                            <li class="project-btn"><a href="https://mypettotoro.github.io/myPetTotoro/">Live Link</a></li>
+                            <li class="project-btn"><a href="https://github.com/myPetTotoro/myPetTotoro">Github Repo</a></li>
+                        </ul>
+                    </div>
+                </section>
+    
+                <section class="project-container flex"data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in">
+                    <section class="project-description-special flex-column">
+                        <h3>Safe Spaces Toronto</h3>
+                        <p>An application built with React, Safe Spaces seeks to provide safe restroom access for transgender, intersex, and gender nonconforming individuals. Safe Spaces utilizes data from the Refuge Washroom API, Geolocation, and Firebase.</p>
+                        <ul class="flex">
+                            <li><i class="fab fa-html5"></i></li>
+                            <li><i class="fab fa-css3-alt"></i></li>
+                            <li><i class="fab fa-react"></i></li>
+                            <li><img class="icon" src="./assets/firebaseBLK.svg" alt="Firebase Logo"></li>
+                        </ul>
+                        <ul class="flex">
+                            <li class="project-btn"><a href="https://safe-spaces-toronto.netlify.app/">Live Link</a></li>
+                            <li class="project-btn"><a href="https://github.com/adrienneklee/AdrienneLeeProjectThree">Github Repo</a></li>
+                        </ul>
+                    </section>
+                    <div class="project-img-cont-special">
+                        <img src="./assets/SafeSpaces.png" alt="The Safe Spaces App">
+                    </div>
+                </section>
+
+                <section class="project-container flex" data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in">
+                    <div class="project-img-cont" >
+                        <img src="./assets/SunRunApp.png" alt="The Sun Run App">
+                    </div>
+                    <section class="project-description flex-column">
+                        <h3>Sun Run App</h3>
+                        <p>A group programming project built with React, Sun Run utilizes multiple APIs and Firebase persistence. Sun Run allows users to plan runs based on dates, sunrise/sunset times, distance, and pace. Made in collaboration with friends <a href="https://saramunir.com/">Sara Munir, </a><a href="https://www.kelvinlee.dev/">Kelvin Lee</a> and <a href="https://dallan.ca/">Dallan Jones.</a></p>
+                        <ul class="flex">
+                            <li><i class="fab fa-html5"></i></li>
+                            <li><i class="fab fa-css3-alt"></i></li>
+                            <li><i class="fab fa-react"></i></li>
+                            <li><img class="icon" src="./assets/firebaseBLK.svg" alt="icon image for firebase"></li>
+                        </ul>
+                        <ul class="flex">
+                            <li class="project-btn"><a href="https://sunrun.netlify.app/">Live Link</a></li>
+                            <li class="project-btn"><a href="https://github.com/Chimbuken/sun-run">Github Repo</a></li>
+                        </ul>
+                    </section>    
+                </section>
+
+            </div> <!-- Wrapper Closing Div -->
+        </section>
+
+        <Section id="contact" class="contact flex-column">
+            <h2>Contact</h2>
+                <p>I'm currently open to work and would love to chat!</p>
+                <div class="img-cont">
+                    <img src="./assets/AdrienneLeeSquareDev.png" alt="Adrienne's Profile Photo.">
+                </div>
+                    <a class="btn-email" href="mailto: adrienneklee@gmail.com?subject=Hello Adrienne! I saw your portfolio!" rel="noreferrer"><p>Say Hello!</p><i class="fas fa-envelope" aria-hidden="true"></i></a>
+            
+                <p>Connect with me on social:</p>
+                <ul class="icons flex">
+                    <li><a href="https://www.linkedin.com/in/adrienneklee/"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="https://github.com/adrienneklee"><i class="fab fa-github-square" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/AdrienneKLee"><i class="fab fa-twitter-square" aria-hidden="true"></i></a></li>
+                </ul>
+        </Section>
     </main>
+    <footer>
+        <p class="italic">Created by me, Adrienne Lee, at <a href="https://junocollege.com/">Juno College of Technology</a></p>
+    </footer>
+
+<!-- Link to AOS Library -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
 </body>
 </html>
+
