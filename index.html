@@ -25,32 +25,37 @@
 <body>
     <a href="#about" class="skip-link">Skip to main content.</a>
     <!-- Start of Header Section -->
-    <header>
-        <div class="wrapper">
-            <nav class="flex">
-                <div><p> </p></div>
-                <ul class="flex">
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#projects">Projects</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+    <header class="header wrapper">
+        <!-- <div class="wrapper"> -->
+            <nav class="navbar flex">
+                <ul class="nav-menu flex">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link resume" href="./assets/Adrienne Lee Resume.pdf">Resume</a></li>
                 </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </nav>
 
             <section class="title-container flex-column">
-                <div class="logo"><img src="./assets/Screen Shot 2021-12-08 at 12.14.40 PM.png" alt="Adrienne Lee Logo"></div>
+                <div class="logo"><img src="./assets/AKLlogo.png" alt="Adrienne Lee Logo"></div>
                 <h1 class="title">Adrienne Lee</h1>
                 <h2>Front End Developer</h2>
             </section>
 
-        </div> <!-- Wrapper Closing Div -->
+        <!-- </div> Wrapper Closing Div -->
     </header> 
     <!-- End of Header Section -->
 
     <!-- Start of Main Section -->
-    <main>
+    <main id="about">
         <div class="wrapper">
             <h2>About Me</h2>
-            <section id="about" class="flex">
+            <section class="about flex">
                 <div class="img-container">
                     <img src="./assets/AdrienneLeeBabyDev.png" alt="Adrienne as a child wearing swim goggles.">
                     <p class="whisper">Been wearing my blue light glasses since 1988.</p>
@@ -69,7 +74,7 @@
 
                     <section class="flex">
                         <h3>Skills</h3>
-                        <ul class="flex">
+                        <ul class="skills flex">
                             <li><i class="fab fa-react" aria-hidden="true"></i></li>
                             <li><i class="fab fa-html5" aria-hidden="true"></i></li>
                             <li><i class="fab fa-css3-alt" aria-hidden="true"></i></li>
@@ -95,7 +100,7 @@
                     </div>
                     <div class="project-description flex-column">
                         <h3>Guess Who Ghibli</h3>
-                        <p>An application built with Javascript inspired by the '80s board game <span class="italic">Guess Who?</span>. Users are prompted to guess randomly generated characters from the Studio Ghibli API. Made in collaboration with friend <a href="https://brentoncodes.com/">Brenton Pedler.</a></p>
+                        <p>An application built with Javascript inspired by the '80s board game <span class="italic">Guess Who?</span> Users are prompted to guess randomly generated characters from the Studio Ghibli API. Made in collaboration with friend <a href="https://brentoncodes.com/">Brenton Pedler.</a></p>
                         <ul class="flex">
                             <li><i class="fab fa-html5" aria-hidden="true"></i></li>
                             <li><i class="fab fa-sass" aria-hidden="true"></i></li>
@@ -108,7 +113,7 @@
                     </div>
                 </section>
     
-                <section class="project-container flex"data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in">
+                <section class="project-container special flex"data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in">
                     <section class="project-description-special flex-column">
                         <h3>Safe Spaces Toronto</h3>
                         <p>An application built with React, Safe Spaces seeks to provide safe restroom access for transgender, intersex, and gender nonconforming individuals. Safe Spaces utilizes data from the Refuge Washroom API, Geolocation, and Firebase.</p>
@@ -174,7 +179,30 @@
 <!-- Link to AOS Library -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-    AOS.init();
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll(".nav-link");
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }
+    
+    AOS.init({
+        disable: function() {
+            const maxWidth = 825;
+            return window.innerWidth < maxWidth;
+        }
+    });
 </script>
 
 </body>

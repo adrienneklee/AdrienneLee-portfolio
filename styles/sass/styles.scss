@@ -8,15 +8,27 @@ header {
 }
 
 nav {
-    justify-content: space-between;
     padding: 20px 0;
+    justify-content: flex-end;
     ul {
-        width: 50%;
         justify-content: flex-end;
         li {
             margin-left: 50px;
         }
     }
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3 ease-in-out;
+    background-color: $primary;
 }
 
 .logo {
@@ -81,6 +93,10 @@ nav {
         margin-right: 30px;
         font-weight: 700;
     }
+}
+
+.skills {
+    flex-wrap: wrap;
 }
 
 .whisper {
@@ -187,4 +203,101 @@ footer {
         font-size: 1.4rem;
         margin: 10px 0;
     }
+}
+
+@media (max-width: 825px) {
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: $primary;
+        width: 50%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+        .nav-link {
+            color: black;
+        }
+    }
+
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .project-container {
+        flex-direction: column;
+        .project-img-cont, .project-description {
+            width: 100%;
+            margin: 0;
+        }
+    }
+    .special {
+        flex-direction: column-reverse;
+    }
+
+    .project-description-special, .project-img-cont-special {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        .text-container {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    .img-container {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .whisper {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 527px) {
+    h1 {
+        font-size: 6rem;
+        line-height: normal;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.6rem;
+    }
+.project-btn {
+    border: 1px solid $secondary;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    margin: 10px 5px;
+}
+}
+
+@media (max-width: 375px) {
+    h1{
+        font-size: 4rem;
+        line-height: normal;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    
 }
