@@ -19,11 +19,20 @@ nav {
     }
 }
 
+.logo {
+    height: 300px;
+    width: 300px;
+}
+
 .title-container {
-    height: 80vh;
+    height: 90vh;
     align-items: center;
+    justify-content: center;
     h1 span {
         text-transform: uppercase;
+    }
+    h2 {
+        text-transform: none;
     }
 }
 

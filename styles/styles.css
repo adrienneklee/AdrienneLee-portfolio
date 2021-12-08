@@ -278,7 +278,7 @@ a {
   text-decoration: none;
   letter-spacing: 1px;
   color: #eeeeee;
-  cursor: pointer;
+  cursor: url("../assets/chopsticks.svg"), auto;
 }
 
 a:hover,
@@ -383,14 +383,25 @@ nav ul li {
   margin-left: 50px;
 }
 
+.logo {
+  height: 300px;
+  width: 300px;
+}
+
 .title-container {
-  height: 80vh;
+  height: 90vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .title-container h1 span {
   text-transform: uppercase;
+}
+.title-container h2 {
+  text-transform: none;
 }
 
 .title {

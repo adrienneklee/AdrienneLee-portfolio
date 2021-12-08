@@ -52,7 +52,7 @@ a {
     text-decoration: none;
     letter-spacing: 1px;
     color: $primary;
-    cursor: pointer;
+    cursor: url('../assets/chopsticks.svg'), auto;
 }
 
 a:hover,
