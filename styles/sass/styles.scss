@@ -199,9 +199,10 @@ li .icon {
 
 footer {
     text-align: center;
+    margin: 10px 0;
     p {
         font-size: 1.4rem;
-        margin: 10px 0;
+        margin: 20px 0;
     }
 }
 
@@ -217,23 +218,19 @@ footer {
         text-align: center;
         transition: 0.3s;
     }
-
     .nav-menu.active {
         right: 0;
     }
-
     .nav-item {
         margin: 1rem 0;
         .nav-link {
             color: black;
         }
     }
-
     .hamburger {
         display: block;
         cursor: pointer;
     }
-
     .project-container {
         flex-direction: column;
         .project-img-cont, .project-description {
@@ -244,7 +241,6 @@ footer {
     .special {
         flex-direction: column-reverse;
     }
-
     .project-description-special, .project-img-cont-special {
         width: 100%;
         margin: 0;
@@ -315,7 +311,6 @@ footer {
     br {
         display: none;
     }
-
     .projects {
         margin: 50px 0;
     }
@@ -328,5 +323,11 @@ footer {
     .contact :nth-child(2){
         border: 1px solid black;
         padding: 0 20px;
+    }
+    footer {
+        margin-top: 20px;
+        p {
+            padding: 5px;
+        }
     }
 }

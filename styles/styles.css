@@ -579,10 +579,11 @@ li .icon {
 
 footer {
   text-align: center;
+  margin: 10px 0;
 }
 footer p {
   font-size: 1.4rem;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 @media (max-width: 825px) {
@@ -731,5 +732,12 @@ footer p {
   .contact :nth-child(2) {
     border: 1px solid black;
     padding: 0 20px;
+  }
+
+  footer {
+    margin-top: 20px;
+  }
+  footer p {
+    padding: 5px;
   }
 }
