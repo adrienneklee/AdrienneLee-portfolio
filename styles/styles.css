@@ -689,7 +689,7 @@ footer p {
     margin: 10px 5px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 415px) {
   .title-container {
     height: 60vh;
   }
