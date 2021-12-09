@@ -229,7 +229,6 @@ footer {
         }
     }
 
-
     .hamburger {
         display: block;
         cursor: pointer;
@@ -253,6 +252,12 @@ footer {
 }
 
 @media (max-width: 768px) {
+    h1 {
+        font-size: 6rem;
+    }
+    h2 {
+        font-size: 3.6rem;
+    }
     .about {
         flex-direction: column;
         .text-container {
@@ -271,33 +276,57 @@ footer {
     }
 }
 
-@media (max-width: 527px) {
-    h1 {
-        font-size: 6rem;
-        line-height: normal;
+@media (max-width: 565px) {
+    h1{
+    font-size: 4.8rem;
+    line-height: normal;
     }
-    h2{
-        font-size: 3rem;
+    h2 {
+        font-size: 2.4rem;
     }
-    p {
-        font-size: 1.6rem;
-    }
+
 .project-btn {
     border: 1px solid $secondary;
     text-align: center;
     width: 100%;
     padding: 5px;
     margin: 10px 5px;
-}
+    }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
+    .title-container {
+        height: 60vh;
+    }
     h1{
-        font-size: 4rem;
+        font-size: 3.8rem;
         line-height: normal;
     }
     h2 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
+        margin-bottom: 35px;
     }
-    
+    h3 {
+        margin: 15px 0;
+    }
+    .whisper {
+        text-align: left;
+    }
+    br {
+        display: none;
+    }
+
+    .projects {
+        margin: 50px 0;
+    }
+    .project-description ul, .project-description-special ul {
+    margin: 15px 0;
+    }
+    .project-btn {
+        margin-top: 0;
+    }
+    .contact :nth-child(2){
+        border: 1px solid black;
+        padding: 0 20px;
+    }
 }

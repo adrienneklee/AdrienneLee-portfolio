@@ -10,7 +10,6 @@
     <script src="https://kit.fontawesome.com/d52e43a2f0.js" crossorigin="anonymous"></script>
 
     <!-- Link to Google Fonts -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&family=Work+Sans:wght@400;600;700&display=swap"
@@ -29,9 +28,9 @@
         <!-- <div class="wrapper"> -->
             <nav class="navbar flex">
                 <ul class="nav-menu flex">
-                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item" id="aboutSection"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item" id="projectsSection"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"id="contactSection"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link resume" href="./assets/Adrienne Lee Resume.pdf">Resume</a></li>
                 </ul>
                 <div class="hamburger">
@@ -62,7 +61,7 @@
                 </div>
 
                 <section class="text-container">
-                    <p><span class="italic">Oh, hello!</span> 
+                    <p><span class="italic">Oh, hello!  </span> 
                     <br>
                     I’m Adrienne, a Front End Developer based out of Hamilton, Ontario with a background in sustainability and non-profit management.  I love being able to bridge creativity and tech to build dynamic and meaningful web applications.</p>
                     
@@ -179,32 +178,17 @@
 <!-- Link to AOS Library -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-
-    hamburger.addEventListener("click", mobileMenu);
-
-    function mobileMenu() {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-    }
-
-    const navLink = document.querySelectorAll(".nav-link");
-    navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-    function closeMenu() {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-    }
-    
     AOS.init({
-        disable: function() {
-            const maxWidth = 825;
-            return window.innerWidth < maxWidth;
-        }
-    });
+    disable: function() {
+    const maxWidth = 825;
+    return window.innerWidth < maxWidth; } });
 </script>
 
+<!-- link to jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Link to JS script -->
+<script src="script.js"></script>
 </body>
 </html>
 
