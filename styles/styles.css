@@ -717,6 +717,13 @@ footer p {
     display: none;
   }
 
+  .skills-cont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   .projects {
     margin: 50px 0;
   }

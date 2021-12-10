@@ -311,6 +311,11 @@ footer {
     br {
         display: none;
     }
+    
+    .skills-cont {
+        flex-direction: column;
+    }
+
     .projects {
         margin: 50px 0;
     }
